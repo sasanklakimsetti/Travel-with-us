@@ -6,4 +6,4 @@ Please go through the homepage.html so that you can discover everything of our w
 This was an academic task which has been performed in my 1st semester.
 We had used HTML and CSS only and didn't use JavaScript as we were not fluent in that.
 
-The website services were inspired from IRCTC int the maintenance of Govt of India.
+The website services were inspired from IRCTC in the maintenance of Govt of India.
