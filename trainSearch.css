@@ -1,0 +1,58 @@
+#search {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background-color: #007bff;
+}
+
+/* Make all form elements align in a single row */
+#search form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#search input, 
+#search select {
+    padding: 8px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    width: 180px; 
+}
+#search p {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0; 
+}
+#swap {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+}
+@media (max-width: 1024px) {
+    #search form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #search input, 
+    #search select {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+#modify{
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+#checkbox-section{
+    align-items: center;
+}
