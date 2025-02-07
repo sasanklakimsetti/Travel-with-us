@@ -1,58 +1,179 @@
-#search {
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-    background-color: #007bff;
+/* General styles */
+#modifySearch {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
 }
 
-/* Make all form elements align in a single row */
-#search form {
+#inputs {
     display: flex;
-    align-items: center;
-    gap: 15px;
     flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+#inputs div {
+    display: flex;
+    flex-direction: column;
+}
+
+#swap img {
+    height: 20px;
+    cursor: pointer;
+}
+#swap{
+    margin-top: 20px;
+}
+
+#filtersRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+#filtersRow input[type="checkbox"],
+#inputs select {
+    cursor: pointer;
+}
+
+#modify {
+    display: flex;
     justify-content: center;
 }
-#search input, 
-#search select {
-    padding: 8px;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    font-size: 14px;
-    background-color: #f8f9fa;
-    width: 180px; 
-}
-#search p {
-    font-size: 12px;
-    font-weight: bold;
-    margin: 0; 
-}
-#swap {
-    background: none;
+
+#modifyBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fb792b;
+    color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    height: 10px;
-    width: 10px;
+    font-weight: bolder;
 }
-@media (max-width: 1024px) {
-    #search form {
+
+#modifyBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    #inputs {
         flex-direction: column;
         align-items: flex-start;
     }
-
-    #search input, 
-    #search select {
-        width: 100%; /* Full width on smaller screens */
+    #filtersRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #modify {
+        justify-content: flex-start;
     }
 }
-#modify{
-    text-align: center;
-    align-items: center;
-    border-radius: 5px;
-    border: none;
-    font-size: 20px;
+
+@media screen and (max-width: 768px) {
+    #modifySearch {
+        margin: 20px;
+    }
+    #inputs, #filtersRow {
+        gap: 10px;
+    }
+    #modifyBtn {
+        width: 100%;
+    }
 }
 
-#checkbox-section{
-    align-items: center;
+@media screen and (max-width: 480px) {
+    #inputs {
+        width: 100%;
+    }
+    #inputs div {
+        width: 100%;
+    }
+    #modifyBtn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+#newFilters {
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to move to the next row if needed */
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#filters1, #filters2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#newFilters button {
+    width: 180px;
+    height: 50px;
+    font-weight: bold;
+}
+
+
+.checkbox-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Spacing between checkboxes */
+}
+#refineResults {
+    width: auto; /* Adjust width based on content */
+    max-width: 300px; /* Prevent it from getting too wide */
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 50px; /* Keep it left-aligned */
+}
+
+@media screen and (max-width: 768px) {
+    #newFilters {
+        flex-direction: column;
+        align-items: flex-start; /* Keeps filters aligned left */
+    }
+
+    #filters1, #filters2 {
+        flex-direction: column;
+        align-items: flex-start; /* Keeps buttons stacked properly */
+        gap: 5px;
+    }
+
+    #newFilters button {
+        width: 100%; /* Buttons take full width on small screens */
+    }
+
+    #refineResults {
+        width: auto;
+        max-width: 100%; /* Ensures it fits within screen */
+        margin-left: 20px; /* Keeps it aligned left */
+    }
+}
+
+#filters1 button{
+    cursor: pointer;
+}
+#filters2 button{
+    cursor: pointer;
+}
+.checkbox-container input{
+    cursor: pointer;
+}
+#deptTime .checkbox-container{
+    background-color: #0056b3;
+    border: 2px solid;
+    border-radius: 3px;
+    color: aliceblue    ;
+}
+#arrivalTime .checkbox-container{
+    background-color: #0056b3 ;
+    border: 2px solid;
+    border-radius: 3px;
+    color: aliceblue    ;
 }
