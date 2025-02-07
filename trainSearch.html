@@ -87,77 +87,112 @@
         </div>
     </div>
 
-    <!--Refine Results Filter-->
-    <div id="refineResults">
-        <p>Refine Results</p>
-        <hr>
-        <div id="journeyClass">
-            <p>Journey Class</p>
+    
+    <div id="resultsContainer">
+        <!--Refine Results Filter-->
+        <div id="refineResults">
+            <p>Refine Results</p>
             <hr>
-            <div class="checkbox-container">
-                <div>
-                    <input type="checkbox" name="2ac" id="2ac">
-                    <span>AC 2 Tier (2A)</span>
+            <div id="journeyClass">
+                <p>Journey Class</p>
+                <hr>
+                <div class="checkbox-container">
+                    <div>
+                        <input type="checkbox" name="2ac" id="2ac">
+                        <span>AC 2 Tier (2A)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="3ac" id="3ac">
+                        <span>AC 3 Tier (3A)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="1ac" id="1ac">
+                        <span>AC 1 Tier (1A)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="sl" id="sl">
+                        <span>Sleeper (SL)</span>
+                    </div>
                 </div>
-                <div>
-                    <input type="checkbox" name="3ac" id="3ac">
-                    <span>AC 3 Tier (3A)</span>
-                </div>
-                <div>
-                    <input type="checkbox" name="1ac" id="1ac">
-                    <span>AC 1 Tier (1A)</span>
-                </div>
-                <div>
-                    <input type="checkbox" name="sl" id="sl">
-                    <span>Sleeper (SL)</span>
+                <br> <br>
+            </div>
+            <div id="deptTime">
+                <p>Departure Time</p> <hr>
+                <div class="checkbox-container">
+                    <div>
+                        <input type="checkbox" name="0to6" id="0to6">
+                        <span>00:00 - 06:00</span>
+                        <span>(Early Morning)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="6to12" id="6to12">
+                        <span>06:00 - 12:00 (Morning)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="12to18" id="12to18">
+                        <span>12:00 - 18:00 (Mid Day)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="18to24" id="18to24">
+                        <span>18:00 - 24:00 (Night)</span>
+                    </div>
                 </div>
             </div>
-            <br> <br>
-        </div>
-        <div id="deptTime">
-            <p>Departure Time</p> <hr>
-            <div class="checkbox-container">
-                <div>
-                    <input type="checkbox" name="0to6" id="0to6">
-                    <span>00:00 - 06:00</span>
-                    <span>(Early Morning)</span>
-                </div>
-                <div>
-                    <input type="checkbox" name="6to12" id="6to12">
-                    <span>06:00 - 12:00 (Morning)</span>
-                </div>
-                <div>
-                    <input type="checkbox" name="12to18" id="12to18">
-                    <span>12:00 - 18:00 (Mid Day)</span>
-                </div>
-                <div>
-                    <input type="checkbox" name="18to24" id="18to24">
-                    <span>18:00 - 24:00 (Night)</span>
+            <div id="arrivalTime">
+                <p>Arrival Time</p> <hr>
+                <div class="checkbox-container">
+                    <div>
+                        <input type="checkbox" name="0to6" id="0to6">
+                        <span>00:00 - 06:00</span>
+                        <span>(Early Morning)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="6to12" id="6to12">
+                        <span>06:00 - 12:00 (Morning)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="12to18" id="12to18">
+                        <span>12:00 - 18:00 (Mid Day)</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="18to24" id="18to24">
+                        <span>18:00 - 24:00 (Night)</span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="arrivalTime">
-            <p>Arrival Time</p> <hr>
-            <div class="checkbox-container">
+        <div id="searchResults">
+            <div id="trainDetails">
                 <div>
-                    <input type="checkbox" name="0to6" id="0to6">
-                    <span>00:00 - 06:00</span>
-                    <span>(Early Morning)</span>
+                    <h3 id="trainName">Train Name</h3>
+                    <p id="trainID">Train ID</p>
+                    <div id="route">
+                        <span>Departure</span> → <span>Destination</span>
+                    </div>
+                    <div id="runsOn">
+                        <span>Sun</span> <span>Mon</span> <span>Tue</span>
+                        <span>Wed</span> <span>Thu</span> <span>Fri</span> <span>Sat</span>
+                    </div>
                 </div>
-                <div>
-                    <input type="checkbox" name="6to12" id="6to12">
-                    <span>06:00 - 12:00 (Morning)</span>
+                <div id="dep">
+                    <span>Departure: 08 Feb,2025 - 10:00 AM</span> <br> <br>
                 </div>
-                <div>
-                    <input type="checkbox" name="12to18" id="12to18">
-                    <span>12:00 - 18:00 (Mid Day)</span>
+                <div id="arr">
+                    <span >Arrival: 09 Feb, 2025 - 5:00 PM</span>
                 </div>
-                <div>
-                    <input type="checkbox" name="18to24" id="18to24">
-                    <span>18:00 - 24:00 (Night)</span>
-                </div>
+            </div>
+    
+            <!-- Coaches Container -->
+            <div id="coachesContainer">
+                <div id="coachesList"></div>
+            </div>
+            
+    
+            <div id="bookNow">
+                <button id="bookBtn" disabled>Book Now</button>
             </div>
         </div>
     </div>
+    <script src="trainSearch.js"></script>
 </body>
 </html>
